@@ -1,0 +1,120 @@
+/* ===== 1. Global Reset & Modern Typography ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #edf2f4; /* Soft cool gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== 2. Sticky Navigation Bar ===== */
+nav {
+    background-color: #2b2d42; /* Deep Navy Blue */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky; /* Sticks to top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #edf2f4;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+nav a:hover {
+    color: #ef233c; /* Red accent on hover */
+}
+
+/* The 'Active' Page Style */
+nav a.active {
+    color: #ef233c;
+    border-bottom: 2px solid #ef233c;
+    padding-bottom: 5px;
+}
+
+/* ===== 3. Main Content Card ===== */
+.container {
+    max-width: 850px;
+    margin: 3rem auto; /* Centered with vertical spacing */
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* elegant shadow */
+}
+
+/* ===== 4. Headings with Accents ===== */
+h1 {
+    color: #2b2d42;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+h2, h3, h4 {
+    color: #2b2d42;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 15px;
+    border-left: 5px solid #ef233c; /* Stylish accent line on the left */
+}
+
+/* ===== 5. Text & Layout ===== */
+p {
+    margin-bottom: 1.2rem;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 2.5rem 0;
+}
+
+/* ===== 6. Skills as 'Tags' ===== */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allows tags to wrap to next line */
+    gap: 10px; /* Space between tags */
+}
+
+ul li {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #2b2d42;
+    padding: 8px 16px;
+    border-radius: 20px; /* Pill shape */
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ===== 7. Mobile Responsiveness ===== */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 15px 0;
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    h1 { font-size: 2rem; }
+}
